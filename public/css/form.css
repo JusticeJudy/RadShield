@@ -1,0 +1,26 @@
+/*.input-group {
+	background:none;
+	border: solid 2px #21a1e1;
+	color: #21a1e1;
+  	padding: 15px 40px;
+ 	 font-size: 18px;
+}
+
+textarea{
+	background:none !important;
+}
+
+label{
+	position: absolute !important;
+	right: none;
+	top: 50%;
+	bottom: none;
+	left:0;
+}
+
+input[type="text"]{
+	border:none;
+	border-bottom: solid 2px #21a1e1;
+}
+
+*/
