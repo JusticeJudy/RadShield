@@ -11,7 +11,7 @@
 				<img src="img/AAPM_Supporting_Doc_Image_1.png" class="img-responsive" alt="program1" >
 				<figcaption class="carousel-caption">
 					<h1>Instant Analysis</h1>
-					<p>Everbody knows shit's fuck</p>
+					<p>Everbody knows shit's fuckkkkk</p>
 				</figcaption>
 			</figure>
 			</div>
