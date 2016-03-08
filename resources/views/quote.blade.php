@@ -9,7 +9,7 @@
 	<hr>
 	<div class='row>'>
 		<div class="col-md-8 col-md-offset-2">
-			<h3>Fill in this form below and test</h3>
+			<h3>Fill in this form below</h3>
 		</div>
 	</div>
 
