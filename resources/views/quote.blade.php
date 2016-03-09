@@ -22,27 +22,45 @@
 					<div class="form-group">
 						{!! Form::label('name', 'Your Name') !!}
 						{!! Form::text('name') !!}
+						@if($errors->has('name'))
+							{!! $errors->first('name') !!}
+						@endif
 					</div>
 
 					<div class="form-group">
 						{!! Form::label('company', 'Company') !!}
 						{!! Form::text('company') !!}
+						@if($errors->has('company'))
+							{!! $errors->first('company') !!}
+						@endif
 					</div>
+
 				
 
 				<div class="form-group">
 						{!! Form::label('email', 'Email') !!}
-						{!! Form::text('email') !!}
+						{!! Form::email('email') !!}
+						@if($errors->has('email'))
+							{!! $errors->first('email') !!}
+						@endif
 				</div>
 
 				<div class="form-group">
 						{!! Form::label('message', 'Brief Description') !!}
 						{!! Form::text('message') !!}
+						@if($errors->has('message'))
+							{!! $errors->first('mesage') !!}
+						@endif
 				</div>
 
 						{!! Form::file('floorplan') !!}
+						@if($errors->has('floorplan'))
+							{!! $errors->first('floorplan') !!}
+						@endif
 						
+				<div class="form-group">
 						{!! Form::submit('Submit', ['class'=>'btn btn-default']) !!}
+				</div>
 
 				
 			{!! Form::close() !!}

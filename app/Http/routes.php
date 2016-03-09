@@ -29,9 +29,7 @@ Route:: get('/service', function(){
 	return view('service');
 });
 
-Route:: get('/quote', 'PagesController@quote');
 
-Route:: post('/quote', 'PagesController@SubmitQuote');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -45,4 +43,7 @@ Route:: post('/quote', 'PagesController@SubmitQuote');
 
 Route::group(['middleware' => ['web']], function () {
     //
+    Route:: get('/quote', 'PagesController@quote');
+
+Route:: post('/quote', 'PagesController@SubmitQuote');
 });

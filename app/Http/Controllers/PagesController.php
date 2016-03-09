@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use Illuminate\Http\Request;
 use App\Info;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
+// use Illuminate\Support\Facades\Validator;
 //use Illuminate\Support\Facades\Input;
 
 
@@ -29,26 +31,41 @@ class PagesController extends Controller
 
     public function SubmitQuote(Request $request){
 
+        $validation = Validator::make($request->all(), array(
+            'name'=> 'required',
+            'email'=>'required',
+            'company'=>'required',
+            'message'=>'required',
+            'floorplan'=>'mimes:jpg,jpeg,png,tif,pdf',
+            ));
 
-        $upload =$request->file('floorplan');
-        //$upload =Input::file('floorplan');
-        $uploadPath='uploads';
-        $filename= $upload->getClientOriginalName();
-        $success= $upload->move($uploadPath,$filename);
+        if($validation->fails()){
+            return Redirect::to('quote')->withErrors($validation);
+            } else{
 
-        if($success){
-        $info= new Info;
-        $info->name=$request->input('name');
-        $info->email=$request->input('email');
-        $info->company=$request->input('company');
-        $info->message=$request->input('message');
-        $info->floorplan=$filename;
+                $info= new Info;
+                $info->name=$request->input('name');
+                $info->email=$request->input('email');
+                $info->company=$request->input('company');
+                $info->message=$request->input('message');
 
-        $info->save();
+                if($request->hasFile('floorplan')){
+                $upload =$request->file('floorplan');
+                //$upload =Input::file('floorplan');
+                $uploadPath='uploads';
+                $filename= $upload->getClientOriginalName();
+                $success= $upload->move($uploadPath,$filename);
+                $info->floorplan=$filename;
+                }
 
-        return Redirect::to('quote');
-    }
-    }
+                $info->save();
+
+                return Redirect::to('quote')->with('success','Your inquiry has been submitted.');
+                
+
+            
+            }
+        }
 }
 
 
