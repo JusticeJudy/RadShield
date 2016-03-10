@@ -17,6 +17,10 @@
 	<div class="row">
 
 		<div class="col-md-8 col-md-offset-2">
+			@if(Session::has('success'))
+				{{Session::get('success')}}
+			@endif
+
 			{{ Form::open(['files'=>true]) }}
 				
 					<div class="form-group">
