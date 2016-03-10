@@ -11,7 +11,7 @@
 				<img src="img/AAPM_Supporting_Doc_Image_1.png" class="img-responsive" alt="program1" >
 				<figcaption class="carousel-caption">
 					<h1>Instant Analysis</h1>
-					<p>Everbody knows shit's fuckkkkk</p>
+					<p>Everbody knows</p>
 				</figcaption>
 			</figure>
 			</div>
@@ -29,7 +29,7 @@
       			<figure class="image3">
       			<img src="img/clown_heatmap.png" alt="clown" class="img-responsive center-block">
 				<figcaption class="carousel-caption">
-					<h1>I have nothin to say</h1>
+					<h1>Nothing to say</h1>
 				</figcaption>
 				</figure>
       		</div>
