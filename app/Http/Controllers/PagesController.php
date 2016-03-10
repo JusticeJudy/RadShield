@@ -33,7 +33,7 @@ class PagesController extends Controller
 
         $validation = Validator::make($request->all(), array(
             'name'=> 'required',
-            'email'=>'required',
+            'email'=>'required|email',
             'company'=>'required',
             'message'=>'required',
             'floorplan'=>'mimes:jpg,jpeg,png,tif,pdf',

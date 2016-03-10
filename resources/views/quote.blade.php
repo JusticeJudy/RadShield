@@ -17,53 +17,53 @@
 	<div class="row">
 
 		<div class="col-md-8 col-md-offset-2">
-			{!! Form::open(['files'=>true]) !!}
+			{{ Form::open(['files'=>true]) }}
 				
 					<div class="form-group">
-						{!! Form::label('name', 'Your Name') !!}
-						{!! Form::text('name') !!}
+						{{ Form::label('name', 'Your Name') }}
+						{{ Form::text('name') }}
 						@if($errors->has('name'))
-							{!! $errors->first('name') !!}
+							{{ $errors->first('name') }}
 						@endif
 					</div>
 
 					<div class="form-group">
-						{!! Form::label('company', 'Company') !!}
-						{!! Form::text('company') !!}
+						{{ Form::label('company', 'Company') }}
+						{{ Form::text('company') }}
 						@if($errors->has('company'))
-							{!! $errors->first('company') !!}
+							{{ $errors->first('company') }}
 						@endif
 					</div>
 
 				
 
 				<div class="form-group">
-						{!! Form::label('email', 'Email') !!}
-						{!! Form::email('email') !!}
+						{{ Form::label('email', 'Email') }}
+						{{ Form::email('email') }}
 						@if($errors->has('email'))
-							{!! $errors->first('email') !!}
+							{{ $errors->first('email') }}
 						@endif
 				</div>
 
 				<div class="form-group">
-						{!! Form::label('message', 'Brief Description') !!}
-						{!! Form::text('message') !!}
+						{{ Form::label('message', 'Brief Description') }}
+						{{ Form::text('message') }}
 						@if($errors->has('message'))
-							{!! $errors->first('mesage') !!}
+							{{ $errors->first('mesage') }}
 						@endif
 				</div>
 
-						{!! Form::file('floorplan') !!}
+						{{ Form::file('floorplan') }}
 						@if($errors->has('floorplan'))
-							{!! $errors->first('floorplan') !!}
+							{{ $errors->first('floorplan')  }}
 						@endif
 						
 				<div class="form-group">
-						{!! Form::submit('Submit', ['class'=>'btn btn-default']) !!}
+						{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
 				</div>
 
 				
-			{!! Form::close() !!}
+			{{ Form::close() }}
 
 
 		</div>
