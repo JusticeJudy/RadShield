@@ -40,8 +40,7 @@ class PagesController extends Controller
             ));
 
         if($validation->fails()){
-            $request->flash();
-            return Redirect::to('quote')->withErrors($validation);
+            return Redirect::to('quote')->withErrors($validation)->withInput();
             } else{
 
                 $info= new Info;

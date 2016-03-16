@@ -57,11 +57,22 @@
 						@endif
 				</div>
 
+				<div class="form-group">
 						{{ Form::file('floorplan') }}
+						<span class="hide view">
+							View
+						</span>
+						<span class="hide delete">
+							Delete
+						</span>
+						<span class="hide add">
+							Add Another File
+						</span>
 						@if($errors->has('floorplan'))
 							{{ $errors->first('floorplan')  }}
 						@endif
-						
+					
+				</div>	
 				<div class="form-group">
 						{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
 				</div>
@@ -69,11 +80,51 @@
 				
 			{{ Form::close() }}
 
-
 		</div>
 	</div>
+@stop
+
+@section('quoteJS')
+	
+	<script>
+		$(document).ready(function(){
+			
+			
+			$('input[type=file]').change(function(){
+				var file= this.files[0];
+				// ?var reader= new FileReader();
+				$(".hide").removeClass("hide");
+				
+				// $("img").attr("src", URL.createObjectURL(file));
+
+				$(".view").click(function(){
+					var windowObjectReference;
+					windowObjectReference= window.open(
+							URL.createObjectURL(file), "picture", "resizable,scrollbars,status");
+						});
+
+				});
+
+				$(".add").click(function(){
+
+				});
+
+				// $(reader).load(function(e){
+				// 	console.log("reader");
+				// 	$("img").attr("src", e.target.result);
+				// });
+
+				// if(file){
+				// 	console.log(reader.readAsDataURL(file));
+					
+				// }
+
+			});
 
 
+
+
+	</script>
 
 
 @stop

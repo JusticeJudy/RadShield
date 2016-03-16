@@ -224,3 +224,10 @@ li>a:focus {
 	transform:rotateX(0deg);
 	/*-webkit-transform-origin: left bottom;*/
 }
+
+
+.view, .delete, .add{
+	padding: 5px;
+	text-decoration: underline;
+	cursor: pointer;
+}
