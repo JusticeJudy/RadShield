@@ -57,8 +57,11 @@
 						@endif
 				</div>
 
-				<div class="form-group">
+				<div class="form-group fileupload">
 						{{ Form::file('floorplan') }}
+						@if($errors->has('floorplan'))
+							{{ $errors->first('floorplan')  }}
+						@endif
 						<span class="hide view">
 							View
 						</span>
@@ -68,9 +71,8 @@
 						<span class="hide add">
 							Add Another File
 						</span>
-						@if($errors->has('floorplan'))
-							{{ $errors->first('floorplan')  }}
-						@endif
+						<!-- <iframe id="viewer"></iframe> -->
+						
 					
 				</div>	
 				<div class="form-group">
@@ -88,25 +90,40 @@
 	
 	<script>
 		$(document).ready(function(){
+
+			var item= $(".fileupload").clone(true);
 			
 			
 			$('input[type=file]').change(function(){
+				
 				var file= this.files[0];
-				// ?var reader= new FileReader();
+				var reader= new FileReader();
+				reader.readAsDataURL(file);
 				$(".hide").removeClass("hide");
 				
-				// $("img").attr("src", URL.createObjectURL(file));
+				// $("iframe").attr("src", URL.createObjectURL(file));
+
+				// $(".view").click(function(){
+				// 	var windowObjectReference;
+				// 	windowObjectReference= window.open(
+				// 			URL.createObjectURL(file), "picture", "resizable,scrollbars,status");
+				// 		});
 
 				$(".view").click(function(){
 					var windowObjectReference;
-					windowObjectReference= window.open(
-							URL.createObjectURL(file), "picture", "resizable,scrollbars,status");
-						});
+					
+					// var preview=;
+					windowObjectReference= window.open(reader.result,"picture", "resizable,scrollbars,status");
 
 				});
 
-				$(".add").click(function(){
+				});
 
+				
+				$(".add").click(function(){
+					var fileinput = $(this).parent();
+					
+					fileinput.append("<br/>"). append(item);
 				});
 
 				// $(reader).load(function(e){
