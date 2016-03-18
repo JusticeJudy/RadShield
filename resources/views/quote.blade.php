@@ -57,7 +57,7 @@
 						@endif
 				</div>
 
-				<div class="form-group fileupload">
+				<div class="form-group fileupload" id="fileupload">
 						{{ Form::file('floorplan') }}
 						@if($errors->has('floorplan'))
 							{{ $errors->first('floorplan')  }}
@@ -91,19 +91,20 @@
 	<script>
 		$(document).ready(function(){
 
-			var item= $(".fileupload").clone(true);
-			
-			
-			$('input[type=file]').change(function(){
+			var item= $("#fileupload").clone(true,true);
+			// var item='<div class="form-group fileupload">{{ Form::file("floorplan") }}@if($errors->has("floorplan")){{ $errors->first("floorplan")  }}@endif<span class="hide view">View</span><span class="hide delete">Delete</span><span class="hide add">Add Another File</span></div>';                                                                                                                                                                              
+				$('input[type=file]').change(function(){
+			// $(".fileupload").on("change",('input[type=file]'),  function(){
 				
 				var file= this.files[0];
 				var reader= new FileReader();
 				reader.readAsDataURL(file);
-				$(".hide").removeClass("hide");
+				$("span").removeClass("hide");
+				});
 				
 				// $("iframe").attr("src", URL.createObjectURL(file));
 
-				// $(".view").click(function(){
+				// 
 				// 	var windowObjectReference;
 				// 	windowObjectReference= window.open(
 				// 			URL.createObjectURL(file), "picture", "resizable,scrollbars,status");
@@ -117,15 +118,20 @@
 
 				});
 
+				
+
+				$('.add').click(function(){
+				// $(".fileupload").on("click",".add", function(event){
+					 var fileinput = $(this).parent();
+					
+					$(this).remove();
+					console.log(fileinput);
+					$(fileinput).after("<br>").after(item);
+					
+					console.log(item);
 				});
 
 				
-				$(".add").click(function(){
-					var fileinput = $(this).parent();
-					
-					fileinput.append("<br/>"). append(item);
-				});
-
 				// $(reader).load(function(e){
 				// 	console.log("reader");
 				// 	$("img").attr("src", e.target.result);
