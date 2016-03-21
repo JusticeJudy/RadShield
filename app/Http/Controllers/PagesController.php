@@ -31,14 +31,25 @@ class PagesController extends Controller
 
     public function SubmitQuote(Request $request){
 
+        
+
         $validation = Validator::make($request->all(), array(
             'name'=> 'required',
             'email'=>'required|email',
             'company'=>'required',
             'message'=>'required',
-            'floorplan'=>'mimes:jpg,jpeg,png,tif,pdf',
+            'floorplan.*'=>'mimes:jpg,jpeg,png,pdf',
             ));
 
+    //     if($request->hasFile('floorplan')){
+    //             $files =$request->file('floorplan');
+    //     foreach ($files as $file){
+    //         $rules=array('file'=> 'mimes:jpg,jpeg,png,pdf');
+    //         $validator = Validator::make(array('file'=> $file), $rules);
+            
+    //     }
+    // }
+        
         if($validation->fails()){
             return Redirect::to('quote')->withErrors($validation)->withInput();
             } else{
@@ -49,13 +60,21 @@ class PagesController extends Controller
                 $info->company=$request->input('company');
                 $info->message=$request->input('message');
 
-                if($request->hasFile('floorplan')){
-                $upload =$request->file('floorplan');
+                if($files){
+                    $filearray=array();
+                     foreach ($files as $file){
+                //$upload =$request->file('floorplan');
                 //$upload =Input::file('floorplan');
-                $uploadPath='uploads';
-                $filename= $upload->getClientOriginalName();
-                $success= $upload->move($uploadPath,$filename);
-                $info->floorplan=$filename;
+                    $uploadPath='uploads';
+                    $filename= time().$file->getClientOriginalName();
+                    $success= $file->move($uploadPath,$filename);
+                    if($success){
+                    $filearray[]=$filename;
+                    
+                    }
+                    
+                    }
+                $info->floorplan=$filearray;
                 }
 
                 $info->save();

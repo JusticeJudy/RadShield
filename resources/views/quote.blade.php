@@ -58,9 +58,9 @@
 				</div>
 
 				<div class="form-group fileupload">
-						{{ Form::file('floorplan[]', ['multiple']) }}
+						{{ Form::file('floorplan[]', array('multiple'=>true)) }}
 						@if($errors->has('floorplan'))
-							{{ $errors->first('floorplan')  }}
+							{{ $errors->first('floorplan.*')  }}
 						@endif
 						<span class="hide view">
 							View
