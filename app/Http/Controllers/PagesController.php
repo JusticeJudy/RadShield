@@ -52,6 +52,7 @@ class PagesController extends Controller
         
         if($validation->fails()){
             return Redirect::to('quote')->withErrors($validation)->withInput();
+            // dd($errors->all());
             } else{
 
                 $info= new Info;
@@ -60,7 +61,8 @@ class PagesController extends Controller
                 $info->company=$request->input('company');
                 $info->message=$request->input('message');
 
-                if($files){
+                if($request->hasFile('floorplan')){
+                   $files =$request->file('floorplan');
                     $filearray=array();
                      foreach ($files as $file){
                 //$upload =$request->file('floorplan');

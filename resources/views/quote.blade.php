@@ -58,10 +58,8 @@
 				</div>
 
 				<div class="form-group fileupload">
-						{{ Form::file('floorplan[]', array('multiple'=>true)) }}
-						@if($errors->has('floorplan'))
-							{{ $errors->first('floorplan.*')  }}
-						@endif
+						{{ Form::file('floorplan[]') }}
+						
 						<span class="hide view">
 							View
 						</span>
@@ -75,6 +73,25 @@
 						
 					
 				</div>	
+@if($errors->has('floorplan.0','floorplan.1','floorplan.2'))
+							{{ $errors->first('floorplan.0') }}
+							{{ $errors->first('floorplan.1') }}
+							{{ $errors->first('floorplan.2') }}
+						@endif
+
+			<!-- http://stackoverflow.com/questions/28333809/displaying-validation-errors-from-an-input-array-in-laravel -->
+			<!-- @if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+ -->
+
+
 				<div class="form-group">
 						{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
 				</div>

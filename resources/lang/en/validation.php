@@ -92,6 +92,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'floorplan.*'=>[
+            'mimes'=>'Files must be blah',
+        ],
     ],
 
     /*
