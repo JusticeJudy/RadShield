@@ -2,6 +2,7 @@
 
 @section('FormStyle')
 	<link rel="stylesheet" href="css/form.css">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 @stop
 
 @section('quote')
@@ -57,6 +58,12 @@
 						@endif
 				</div>
 
+				<hr>
+
+				<div>
+				<p> Please upload up to 5 floorplans</p>
+			    </div>
+
 				<div class="form-group fileupload">
 						{{ Form::file('floorplan[]') }}
 						
@@ -73,11 +80,13 @@
 						
 					
 				</div>	
-@if($errors->has('floorplan.0','floorplan.1','floorplan.2'))
-							{{ $errors->first('floorplan.0') }}
-							{{ $errors->first('floorplan.1') }}
-							{{ $errors->first('floorplan.2') }}
+						@if($errors->has('floorplan.0','floorplan.1','floorplan.2','floorplan.3','floorplan.4'))
+							<hr>
+							<p> Wrong upload file format.</p>
 						@endif
+
+
+					
 
 			<!-- http://stackoverflow.com/questions/28333809/displaying-validation-errors-from-an-input-array-in-laravel -->
 			<!-- @if (count($errors) > 0)
@@ -90,9 +99,7 @@
     </div>
 @endif
  -->
-
-
-				<div class="form-group">
+ 				{!! app('captcha')->display(); !!}
 						{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
 				</div>
 
@@ -117,6 +124,10 @@
 				var reader= new FileReader();
 				reader.readAsDataURL(file);
 				$("span").removeClass("hide");
+				if ($('.fileupload').length >=5){
+					console.log(this);
+					$(this).siblings('.add').hide();
+				}
 
 				
 				

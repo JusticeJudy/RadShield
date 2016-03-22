@@ -149,6 +149,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...

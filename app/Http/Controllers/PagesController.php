@@ -9,7 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 // use Illuminate\Support\Facades\Validator;
-//use Illuminate\Support\Facades\Input;
+// use Illuminate\Support\Facades\Input;
 
 
 class PagesController extends Controller
@@ -39,6 +39,7 @@ class PagesController extends Controller
             'company'=>'required',
             'message'=>'required',
             'floorplan.*'=>'mimes:jpg,jpeg,png,pdf',
+            'g-recaptcha-response' => 'required|captcha',
             ));
 
     //     if($request->hasFile('floorplan')){
