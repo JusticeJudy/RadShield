@@ -8,6 +8,7 @@ use App\Info;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
+use Storage;
 // use Illuminate\Support\Facades\Validator;
 // use Illuminate\Support\Facades\Input;
 
@@ -70,7 +71,8 @@ class PagesController extends Controller
                 //$upload =Input::file('floorplan');
                     $uploadPath='uploads';
                     $filename= time().$file->getClientOriginalName();
-                    $success= $file->move($uploadPath,$filename);
+                   // $success= $file->move($uploadPath,$filename);
+                    $success= Storage::disk('local')->put($filename,$file);
                     if($success){
                     $filearray[]=$filename;
                     
