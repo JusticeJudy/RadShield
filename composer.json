@@ -51,6 +51,9 @@
     },
     "require": {
         "laravelcollective/html": "5.2.*",
-        "anhskohbo/no-captcha": "2.*"
+        "anhskohbo/no-captcha": "2.*",
+        "torann/geoip": "0.2.*@dev"
+       
+
 }
 }

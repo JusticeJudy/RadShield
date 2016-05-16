@@ -80,28 +80,21 @@
 						
 					
 				</div>	
-						@if($errors->has('floorplan.0','floorplan.1','floorplan.2','floorplan.3','floorplan.4'))
+
+				<div>
+						@if($errors->has('floorplan.0','floorplan.1','floorplan.2','floorplan.3','floorplan.4','floorplan.5'))
 							<hr>
 							<p> Wrong upload file format.</p>
 						@endif
-
-
-					
-
-			<!-- http://stackoverflow.com/questions/28333809/displaying-validation-errors-from-an-input-array-in-laravel -->
-			<!-- @if (count($errors) > 0)
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
- -->
- 				{!! app('captcha')->display(); !!}
-						{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
 				</div>
+
+				<hr>
+ 				{!! app('captcha')->display(); !!}
+
+						{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
+				
+
+				
 
 				
 			{{ Form::close() }}

@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Storage;
+use GeoIP;
 // use Illuminate\Support\Facades\Validator;
 // use Illuminate\Support\Facades\Input;
 
@@ -39,8 +40,8 @@ class PagesController extends Controller
             'email'=>'required|email',
             'company'=>'required',
             'message'=>'required',
-            'floorplan.*'=>'mimes:jpg,jpeg,png,pdf',
             'g-recaptcha-response' => 'required|captcha',
+            'floorplan.*'=>'mimes:jpg,jpeg,png,pdf',
             ));
 
     //     if($request->hasFile('floorplan')){
@@ -58,10 +59,12 @@ class PagesController extends Controller
             } else{
 
                 $info= new Info;
+                $location= GeoIP::getLocation();
                 $info->name=$request->input('name');
                 $info->email=$request->input('email');
                 $info->company=$request->input('company');
                 $info->message=$request->input('message');
+                $info->location=$location['state'];
 
                 if($request->hasFile('floorplan')){
                    $files =$request->file('floorplan');

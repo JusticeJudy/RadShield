@@ -150,6 +150,8 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        'Torann\GeoIP\GeoIPServiceProvider',
+
 
         /*
          * Application Service Providers...
@@ -206,6 +208,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
+        'GeoIP' => 'Torann\GeoIP\GeoIPFacade'
         
     ],
 
