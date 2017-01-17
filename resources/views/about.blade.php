@@ -1,14 +1,8 @@
- @extends('layout')
+@extends ('layout')
 
- @section('content')
+@section('about')
 
-    <h1>About Page Goes HHHHHHere.</h1>
+		<h1>valule</h1>
 
- @stop
-@section('footer')
 
- 	<script>/*
- 		alert('About page only');
- 	*/</script>
-
-@stop 
+@stop

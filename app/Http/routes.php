@@ -21,12 +21,12 @@ Route:: get('/', function(){
 	return view('home');
 });
 
-Route:: get('/value', function(){
-	return view('value');
+Route:: get('/about', function(){
+	return view('about');
 });
 
-Route:: get('/service', function(){
-	return view('service');
+Route:: get('/faq', function(){
+	return view('faq');
 });
 
 
@@ -43,7 +43,7 @@ Route:: get('/service', function(){
 
 Route::group(['middleware' => ['web']], function () {
     //
-    Route:: get('/quote', 'PagesController@quote');
+    Route:: get('/contact', 'PagesController@contact');
 
-Route:: post('/quote', 'PagesController@SubmitQuote');
+Route:: post('/contact', 'PagesController@SubmitContact');
 });

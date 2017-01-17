@@ -1,3 +1,4 @@
+
 @extends ('layout')
 
 @section('FormStyle')
@@ -5,7 +6,7 @@
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 @stop
 
-@section('quote')
+@section('contact')
 	
 	<hr>
 	<div class='row>'>
@@ -15,7 +16,7 @@
 	</div>
 
 
-	<div class="row">
+	<div class="row form-block">
 
 		<div class="col-md-8 col-md-offset-2">
 			@if(Session::has('success'))
@@ -25,16 +26,17 @@
 			{{ Form::open(['files'=>true]) }}
 				
 					<div class="form-group">
+						{{ Form::text('name','',array('required' => 'required')) }}
 						{{ Form::label('name', 'Your Name') }}
-						{{ Form::text('name') }}
 						@if($errors->has('name'))
 							{{ $errors->first('name') }}
 						@endif
 					</div>
 
 					<div class="form-group">
+						
+						{{ Form::text('company','',array('required' => 'required'))  }}
 						{{ Form::label('company', 'Company') }}
-						{{ Form::text('company') }}
 						@if($errors->has('company'))
 							{{ $errors->first('company') }}
 						@endif
@@ -43,16 +45,18 @@
 				
 
 				<div class="form-group">
+						
+						{{ Form::email('email','',array('required' => 'required')) }}
 						{{ Form::label('email', 'Email') }}
-						{{ Form::email('email') }}
 						@if($errors->has('email'))
 							{{ $errors->first('email') }}
 						@endif
 				</div>
 
 				<div class="form-group">
+						
+						{{ Form::textarea('message','',array('required' => 'required')) }}
 						{{ Form::label('message', 'Brief Description') }}
-						{{ Form::text('message') }}
 						@if($errors->has('message'))
 							{{ $errors->first('mesage') }}
 						@endif
@@ -91,7 +95,7 @@
 				<hr>
  				{!! app('captcha')->display(); !!}
 
-						{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
+				{{ Form::submit('Submit', ['class'=>'btn btn-default']) }}
 				
 
 				
@@ -102,9 +106,14 @@
 		</div>
 	</div>
 @stop
-
-@section('quoteJS')
+<!-- @section('homeJS')
 	
-	<script src="JS/quoteJS.js"></script>
+	<script src="JS/homeJS.js"></script>
+
+@stop -->
+@section('contactJS')
+	
+	<script src="JS/contactJS.js"></script>
 
 @stop
+

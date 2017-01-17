@@ -25,13 +25,13 @@ class PagesController extends Controller
 	     return view('about');
     }
 
-    public function quote(){
+    public function contact(){
 
-        return view('quote');
+        return view('contact');
 
     }
 
-    public function SubmitQuote(Request $request){
+    public function SubmitContact(Request $request){
 
         
 
@@ -54,7 +54,7 @@ class PagesController extends Controller
     // }
         
         if($validation->fails()){
-            return Redirect::to('quote')->withErrors($validation)->withInput();
+            return Redirect::to('contact')->withErrors($validation)->withInput();
             // dd($errors->all());
             } else{
 
@@ -64,7 +64,7 @@ class PagesController extends Controller
                 $info->email=$request->input('email');
                 $info->company=$request->input('company');
                 $info->message=$request->input('message');
-                $info->location=$location['state'];
+                $info->location=$location['city'];
 
                 if($request->hasFile('floorplan')){
                    $files =$request->file('floorplan');
@@ -87,7 +87,7 @@ class PagesController extends Controller
 
                 $info->save();
 
-                return Redirect::to('quote')->with('success','Your inquiry has been submitted.');
+                return Redirect::to('contact')->with('success','Your inquiry has been submitted.');
                 
 
             

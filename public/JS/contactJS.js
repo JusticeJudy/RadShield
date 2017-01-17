@@ -1,6 +1,17 @@
 
 		$(document).ready(function(){
-
+				$('input, textarea').blur(function(){
+				    var tmpval = $(this).val();
+				    if(tmpval == '') {
+				    	console.log('haha')
+				        $(this).addClass('hasContent');
+				        $(this).removeClass('hasContent');
+				    } else {
+				    	$(this).removeClass('hasContent');
+				        $(this).addClass('hasContent');
+				        
+				    }
+				});
 			
 			// var item='<div class="form-group fileupload">{{ Form::file("floorplan") }}@if($errors->has("floorplan")){{ $errors->first("floorplan")  }}@endif<span class="hide view">View</span><span class="hide delete">Delete</span><span class="hide add">Add Another File</span></div>';                                                                                                                                                                              
 				$('input[type=file]').change(function(){
@@ -33,7 +44,15 @@
 
 				});
 
-				
+				$(".delete").click(function(){
+					var $fileinput = $(this).parent();
+					if ($('.fileupload').length == 1){
+					console.log(this);
+					$(".fileupload").clone(true,true).insertAfter($fileinput);
+				}
+					$(this).parent().remove();
+					
+				});
 
 				$('.add').click(function(){
 				// $(".fileupload").on("click",".add", function(event){
@@ -47,7 +66,7 @@
 					console.log(item);
 				});
 				});
-
+				
 				var item= $(".fileupload").clone(true,true);
 				// $(reader).load(function(e){
 				// 	console.log("reader");
@@ -58,6 +77,8 @@
 				// 	console.log(reader.readAsDataURL(file));
 					
 				// }
+
+
 
 			});
 

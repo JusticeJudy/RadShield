@@ -1,6 +1,6 @@
 @extends ('layout')
 
-@section('service')
+@section('faq')
 
 	<h1>service</h1>
 
