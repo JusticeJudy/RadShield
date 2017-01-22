@@ -3,3 +3,4 @@
 /public/uploads
 /.env
 /config/database.php
+/composer.phar
