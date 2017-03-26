@@ -9,7 +9,7 @@ body {
 }
 
 .container-fluid{
-	max-width: 80%;
+	max-width: 75%;
 	height: 100%;
 }
 /*# sourceMappingURL=app.css.map */
@@ -23,7 +23,7 @@ body {
 	display: none;
 }
 
-@media only screen and (max-width: 514px){
+@media only screen and (max-width: 604px){
 .mobile{
 	display: block;
 }
@@ -36,10 +36,16 @@ body {
 	padding: 0px;
 }
 .navbar{
-	height: 130px;  
+	/*height: 130px;  */
+	/*height: 23vh;*/
 	/*background-color: #F6F4F0 ;*/
 	background-color: #fdfdfd;
 	margin: 0 0 3px 0;
+}
+
+.navbar-header{
+	/*height:130px;*/
+	height: 17.5vh;
 }
 
 .navbar-collapse{
@@ -49,6 +55,7 @@ body {
 
 .navbar-brand img {
 	height:100px;
+	height: 16vh;
 	max-width:100%;
 }
 
@@ -63,12 +70,18 @@ li a{
 @media only screen and (max-width: 768px){
 
 .navbar{
-	height:auto;
+	/*min-height:23vh;*/
+	height: auto;
 	padding-bottom: 10px;
 }
 
+.navbar-brand img {
+	height:100px;
+	height: 15vh;
+	max-width:100%;
+}
 .navbar-header{
-	height:130px;
+	/*height:130px;*/
 }
 .navbar-collapse {
 	border:0px;
@@ -93,14 +106,16 @@ height: auto !important;
 }*/
 
 /* No greater than 1130px, no less than 768px */
-@media (max-width:1130px) and (min-width:768px) {
+/*@media (max-width:1130px) and (min-width:768px) {*/
 
-	.navbar{
+@media only screen and (min-width: 768px){
+
+	/*.navbar{
 		height: 150px;  
-	}
+	}*/
 
     .navbar-brand img {
-		height:85px;
+		height:95px;
 	}	
 
 	.navbar-collapse{
@@ -130,6 +145,7 @@ background-color: rgba(124, 124, 124, 0.8);
 	width: 110px;
 	height: 50px !important;
 	font-size: 18px;
+	font-size: 1.4vw;
 	text-align: center;
 	display: inline-block !important;
 }
@@ -174,6 +190,7 @@ background-color: rgba(124, 124, 124, 0.8);
 .image1 h1{
 	color: #3b3731;
 	font-size:40px;
+	font-size:3vw;
 	font-weight: 350;
 	margin-top: 20%;
 	-webkit-transition: 0.5s, -webkit-transform 0.5s;
@@ -193,7 +210,8 @@ background-color: rgba(124, 124, 124, 0.8);
 	color: #3b3731;
 	padding: 50px;
 	border: 3px solid #3b3731;
-	font-size: 20px;
+	font-size: 17px;
+	font-size: 1.3vw;
 	letter-spacing: 1px;
 	text-align: center;
 	opacity: 0;
@@ -277,7 +295,8 @@ background-color: rgba(124, 124, 124, 0.8);
 }
 
 .image2 h1, .image3 h1{
-	font-size: 30px;
+	font-size: 25px;
+	font-size: 2.3vw;
 }
 
 .image3 .carousel-caption{
@@ -305,22 +324,19 @@ background-color: rgba(124, 124, 124, 0.8);
 
 .image2:hover figcaption, .image3:hover figcaption{
 	opacity:0.7;
-	top: 40%;
+	top: 50%;
+	bottom: 0%;
 	-webkit-transform:rotateX(0deg);
 	-moz-transform:rotateX(0deg);
 	-ms-transform:rotateX(0deg);
 	transform:rotateX(0deg);
 	/*-webkit-transform-origin: left bottom;*/
 }
-.image3:hover figcaption{
-	bottom: 0%;
-	top:50%;
-}
-
 
 
 .copyright p{
 	font-size: 10px;
+	font-size: 1vw;
 	text-align: center;
 }
 
