@@ -1,7 +1,6 @@
 .banner, .faq_banner{
 	padding: 0px;
 	overflow:hidden;
-	max-height: 38vmax;
 }
 .banner img, .faq_banner img{
 	width: 100%;
@@ -12,13 +11,8 @@
 	padding-top: 15px;
 }
 
-.banner_image h1{
-	font-size: 35px;
-	font-size: 3vw;
-}
 .about {
 	font-size: 20px;
-	font-size: 1.3vw;
 	/*padding-top: 50px;*/
 	padding: 50px 20px 20px 20px;
 }
@@ -31,15 +25,3 @@
 .banner h1{
 	text-shadow: 2px 2px 4px #222222;
 }
-
-@media only screen and (max-width: 604px){
-.banner_image{
-	margin-top: -7vh;
-}
-}
-
-
-
-
-
-
