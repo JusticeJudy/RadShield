@@ -17,6 +17,7 @@
 			<div class="col-lg-12 col-md-12  col-xs-12">
 
 				<p>Coming soon</p>
+				<p>RadShield is an interactive software package to assist radiation shielding design for diagnostic radiology. The calculation methods are based on NCRP Report 147, AAPM Task Group Report 108 and the British Institute of Radiology’s publication: Radiation Shielding for Diagnostic Radiology.</p>
 			</div>
 		</div>
 		
