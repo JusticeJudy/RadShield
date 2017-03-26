@@ -25,11 +25,15 @@ class PagesController extends Controller
 	     return view('about');
     }
 
+    
+
     public function contact(){
 
         return view('contact');
 
     }
+
+
 
     public function SubmitContact(Request $request){
 
@@ -75,7 +79,7 @@ class PagesController extends Controller
                     $uploadPath='uploads';
                     $filename= time().$file->getClientOriginalName();
                    // $success= $file->move($uploadPath,$filename);
-                    $success= Storage::disk('local')->put($filename,$file);
+                    $success= Storage::disk('local')->put($filename,file_get_contents($file));
                     if($success){
                     $filearray[]=$filename;
                     

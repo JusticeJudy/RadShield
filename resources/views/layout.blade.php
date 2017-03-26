@@ -8,6 +8,8 @@
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/about.css">
+		<link rel="stylesheet" href="css/form.css">
 		<link href="http://fonts.googleapis.com/css?family=Raleway:400,800,300" rel="stylesheet" type="text/css">
 	
 	@yield('FormStyle')
@@ -39,7 +41,8 @@
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="./"> <img src="img/RadShield.png" class="img-responsive" alt="logo"></a>
+						<a class="navbar-brand large" href="./"> <img src="img/RadShield.png" class="img-responsive" alt="logo"></a>
+						<a class="navbar-brand mobile" href="./"> <img src="img/shield-2-512.png" class="img-responsive " alt="logo"></a>
 						
 					</div>
 
@@ -48,6 +51,7 @@
 							<ul class="nav navbar-nav navbar-right ">
 								<li><a  href="./">Home</a></li>
 								<li><a href="./about">About</a></li>
+								<li><a href="./download">Download</a></li>
 								<li><a href="./faq">FAQ</a></li>
 								<li><a href="./contact">Contact</a></li>
 							</ul>
@@ -59,6 +63,8 @@
 		@yield('main-page')
 		
 		@yield('about')
+
+		@yield('download')
 
 		@yield('faq')
 

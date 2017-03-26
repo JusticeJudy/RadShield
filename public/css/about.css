@@ -1,0 +1,27 @@
+.banner, .faq_banner{
+	padding: 0px;
+	overflow:hidden;
+}
+.banner img, .faq_banner img{
+	width: 100%;
+}
+
+.about, .faq{
+	background-color: #fdfdfd;
+	padding-top: 15px;
+}
+
+.about {
+	font-size: 20px;
+	/*padding-top: 50px;*/
+	padding: 50px 20px 20px 20px;
+}
+
+.banner_image, .faq_image{
+	max-height: 450px;
+	margin-top: -90px;
+}
+
+.banner h1{
+	text-shadow: 2px 2px 4px #222222;
+}

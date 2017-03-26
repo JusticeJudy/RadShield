@@ -25,6 +25,10 @@ Route:: get('/about', function(){
 	return view('about');
 });
 
+Route:: get('/download', function(){
+	return view('download');
+});
+
 Route:: get('/faq', function(){
 	return view('faq');
 });

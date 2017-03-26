@@ -1,26 +1,62 @@
-/*.input-group {
-	background:none;
-	border: solid 2px #21a1e1;
-	color: #21a1e1;
-  	padding: 15px 40px;
- 	 font-size: 18px;
+.form-block{
+	background-color: white;
+	padding-top: 10px;
+}
+
+.form-group input, textarea {
+	border: 1px solid #888;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+
+form{
+	margin-top: 30px;
+	padding-bottom: 30px;
+}
+.form-group input {
+	padding: 10px;
+	position: relative;
+}
+
+.form-group label{
+	position: absolute;
+	margin-left: 9px;
+	padding: 7px 3px;
+	color: #666;
+	font-size: 15px;
+	font-weight: 200;
+	z-index: 1;
+	pointer-events: none;
+ 	left: 9px;
+/*  width: 100%;*/
+  transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
 }
 
 textarea{
-	background:none !important;
+	padding-top: 10px;
 }
 
-label{
-	position: absolute !important;
-	right: none;
-	top: 50%;
-	bottom: none;
-	left:0;
+input:focus + label, textarea:focus + label, .hasContent + label{
+  /* do something with the label */
+  background-color: white;
+  font-size:12px;
+  margin-left:14px;
+  -webkit-transform:translate3D(0,-20px,0);
+  -ms-transform: translate3D(0,-20px,0);
+  -moz-transform: translate3D(0,-20px,0);
+  transform: translate3D(0,-20px,0);
+
 }
 
-input[type="text"]{
-	border:none;
-	border-bottom: solid 2px #21a1e1;
+.btn {
+	margin-top: 25px;
 }
 
-*/
+.view, .delete, .add{
+	padding: 5px;
+	text-decoration: underline;
+	cursor: pointer;
+}
