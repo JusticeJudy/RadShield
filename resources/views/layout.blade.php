@@ -41,8 +41,8 @@
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand large" href="./"> <img src="img/RadShield.png" class="img-responsive" alt="logo"></a>
-						<a class="navbar-brand mobile" href="./"> <img src="img/shield-2-512.png" class="img-responsive " alt="logo"></a>
+						<a class="navbar-brand large" href="./"> <img src="img/RadShield bg removed.png" class="img-responsive" alt="logo"></a>
+						<a class="navbar-brand mobile" href="./"> <img src="img/shield bg removed.png" class="img-responsive " alt="logo"></a>
 						
 					</div>
 

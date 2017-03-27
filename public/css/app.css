@@ -23,6 +23,17 @@ body {
 	display: none;
 }
 
+@media only screen and (min-width: 1365px)
+{
+	.container-fluid{
+	max-width: 1000px;
+	}
+
+	.navbar-collapse li{
+	/*width: 110px;*/
+	font-size: 18px !important;
+	}
+}
 @media only screen and (max-width: 604px){
 .mobile{
 	display: block;
@@ -142,7 +153,7 @@ background-color: rgba(124, 124, 124, 0.8);
 }
 
 .navbar-collapse li{
-	width: 110px;
+	/*width: 110px;*/
 	height: 50px !important;
 	font-size: 18px;
 	font-size: 1.4vw;
@@ -257,7 +268,7 @@ background-color: rgba(124, 124, 124, 0.8);
 }
 
 .image2 img{
-	margin-top: -100px;
+	margin-top: -80px;
 }
 
 .image2:hover img{
@@ -324,7 +335,7 @@ background-color: rgba(124, 124, 124, 0.8);
 
 .image2:hover figcaption, .image3:hover figcaption{
 	opacity:0.7;
-	top: 50%;
+	top: 30%;
 	bottom: 0%;
 	-webkit-transform:rotateX(0deg);
 	-moz-transform:rotateX(0deg);
