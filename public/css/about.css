@@ -38,6 +38,18 @@
 }
 }
 
+@media only screen and (min-width: 1365px)
+{
+	.banner_image h1{
+	font-size: 35px;
+}
+
+.about {
+	font-size: 20px;
+	}
+}
+
+
 
 
 

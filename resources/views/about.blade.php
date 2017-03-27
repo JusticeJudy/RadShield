@@ -17,7 +17,7 @@
 			<div class="col-lg-12 col-md-12  col-xs-12">
 
 				<p>
-RadShield is an interactive software package to assist radiation shielding design for diagnostic radiology. The calculation methods are based on NCRP Report 147, AAPM Task Group Report 108 and the British Institute of Radiology’s publication: Radiation Shielding for Diagnostic Radiology.</p>
+RadShield is an interactive software package to assist radiation shielding design for diagnostic radiology. The calculation methods are based on NCRP Report 147, AAPM Task Group Report 108 and the British Institute of Radiology’s publication: <i>Radiation Shielding for Diagnostic Radiology</i>.</p>
 
 
 <p>RadShield was created at the University of Oklahoma Health Sciences Center (Oklahoma City, OK, USA) and elevates the standard of radiation shielding design by performing calculations at many points beyond walls and within rooms nonadjacent to x-ray sources. Once complete, the largest found values of air kerma and barrier thickness are reported to the radiation protection specialist.
