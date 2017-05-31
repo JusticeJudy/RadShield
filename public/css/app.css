@@ -66,10 +66,10 @@ body {
 	margin: 0 0 3px 0;
 }
 
-.navbar-header{
-	/*height:130px;*/
+/*.navbar-header{
+	height:130px;
 	height: 17.5vh;
-}
+}*/
 
 .navbar-collapse{
 	margin-top:75px;
@@ -100,11 +100,12 @@ li a{
 
 .navbar-brand img {
 	height:100px;
-	height: 15vh;
+	height: 12vw;
 	max-width:100%;
 }
 .navbar-header{
 	/*height:130px;*/
+	height: 17vw;
 }
 .navbar-collapse {
 	border:0px;
@@ -140,7 +141,10 @@ height: auto !important;
     .navbar-brand img {
 		height:95px;
 	}	
-
+/*	.navbar-header{
+		height:130px;
+		height: 17vw;
+	}*/
 	.navbar-collapse{
 		margin-top:100px;
 	}

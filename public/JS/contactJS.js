@@ -3,7 +3,7 @@
 				$('input, textarea').blur(function(){
 				    var tmpval = $(this).val();
 				    if(tmpval == '') {
-				    	console.log('haha')
+				    	
 				        $(this).addClass('hasContent');
 				        $(this).removeClass('hasContent');
 				    } else {
@@ -47,11 +47,9 @@
 				$(".delete").click(function(){
 					var $fileinput = $(this).parent();
 					if ($('.fileupload').length == 1){
-					console.log(this);
-					$(".fileupload").clone(true,true).insertAfter($fileinput);
-				}
-					$(this).parent().remove();
-					
+					$fileinput.clone(true,true).insertAfter($fileinput);
+					$fileinput.remove();
+				}	
 				});
 
 				$('.add').click(function(){

@@ -6,7 +6,7 @@
 
 		<div class="col-lg-12 col-md-12 col-xs-12 faq_banner">
 		<figure class="faq_image">
-			<img src="img/about.jpg" class="img-responsive" alt="graph" >
+			<img src="img/RadShieldFlow_sm.gif" class="img-responsive" alt="graph" >
 			<!-- <figcaption class="carousel-caption">
 				<h1>Shielding Design 3.0</h1>
 			</figcaption> -->
@@ -17,7 +17,7 @@
 	<div class="row faq">
 		<div class="col-lg-12 col-md-12 col-xs-12 faq">
 		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
+  <!-- <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -30,7 +30,7 @@
         Yes, RadShield will be open source and available for download soon.
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">

@@ -31,7 +31,7 @@
       			<figure class="image3">
       			<img src="img/scanline with workload factor.png" alt="clown" class="img-responsive center-block">
 				<figcaption class="carousel-caption">
-					<h1>Customized workload distributions</h1>
+					<h1>Multiple workload distributions</h1>
 				</figcaption>
 				</figure>
       		</div>

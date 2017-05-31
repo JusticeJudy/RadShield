@@ -64,7 +64,7 @@
 
 				<hr>
 
-				<div>
+				<div class = "fileupload_p">
 				<p> Please upload up to 5 floorplans</p>
 			    </div>
 
